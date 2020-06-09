@@ -5,7 +5,7 @@ html, body{
 .wrapper{
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: minmax(60px,auto) minmax(100px, 1fr) minmax(100px,auto);
+	grid-template-rows: 80px minmax(100px, 1fr) minmax(100px,auto);
 	min-height:100%;
 }
 li{
@@ -46,6 +46,7 @@ li{
 
 /********************** HEADER ***************************/
 header{
+	display: relative;
 	border:1px solid;
 	background-color: #ffe400;
 	position: sticky;
@@ -53,6 +54,10 @@ header{
   	z-index: 2;
   	align-items: center;
   	border-bottom-width: 2px;
+}
+header nav {
+	height: 100%;
+	margin:auto 0;
 }
 img#LOGO{
 	max-height: 68px;
@@ -73,12 +78,6 @@ img#LOGO{
 .header_nav_button_list{
 	display: flex;
 	align-items: center;
-}
-
-@media (max-width: 575px){
-	header{
-		/*position: relative;*/
-	}
 }
 /******************* NAV_LIST ******************/
 .header_nav_list{
@@ -148,15 +147,6 @@ header #heart{
 header #profile{
 	margin-top: 10px;
 }
-@media (max-width: 768px){
-	/*.header_nav_ul{
-		order:1;
-	}
-	.header_nav_list{
-		order:2;
-	}
-*/
-}
 /*********************************************************/
 
 
@@ -172,9 +162,16 @@ main{
 	height: auto;
 }
 #MainMenu{
-	max-height:500px;
+	max-height: calc(100vh - 80px);
 	position: sticky;
-	top: 93px;
+	top: 80px;
+}
+@media (max-width: 767px){
+	.main_bar{
+		position: fixed;
+		display: none;
+		z-index: 99;
+	}
 }
 .list-group.panel .list-group-item {
 	border-radius: 4px;
@@ -241,5 +238,8 @@ footer{
 footer ul li a{
 	color: #663399;
 	font-weight: 600;
+}
+footer img{
+	max-height: 60px;
 }
 /********************************************************/
