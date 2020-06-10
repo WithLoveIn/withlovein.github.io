@@ -161,6 +161,7 @@ main{
 .main_bar{
 	display: flex;
 	height: auto;
+	max-width:243px;
 }
 #MainMenu{
 	max-height: calc(100vh - 80px);
