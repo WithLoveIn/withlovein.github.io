@@ -159,6 +159,7 @@ main{
 }
 /****************** ASIDE BAR **********************/
 .main_bar{
+	display: flex;
 	height: auto;
 }
 #MainMenu{
@@ -203,7 +204,7 @@ a.strong:hover{
 }
 .product_list{
 	display: grid;
-	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-columns:1fr 1fr;
 	gap: 10px;
 }
 .product_example{
@@ -218,6 +219,12 @@ a.strong:hover{
 		grid-column: 2 / 3;
 	}
 }
+@media (min-width: 992px){
+	.product_list{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
 /***********************************************/
 /*********************************************************/
 
