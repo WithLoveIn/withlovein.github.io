@@ -103,6 +103,8 @@ img#LOGO{
 	border: 2px solid #c20188;
 	border-radius: 7px 0 0 7px;
 	height:45px;
+	display: none;
+	z-index: 5;
 }
 .header_nav_search:focus{
 	outline: none;
@@ -123,11 +125,17 @@ img#LOGO{
 	cursor: pointer;
 	height: 45px;
 	min-width: 35px;
+	z-index: 5;
+	margin-left: auto;
+	margin-right: auto; 
 }
 .header_nav_button_search:focus{
 	outline: none;
 }
 @media(min-width: 768px){
+	.header_nav_search{
+		display: flex;
+	}
 	.header_nav_button_search{
 		border-radius: 0 7px 7px 0;
 	}
